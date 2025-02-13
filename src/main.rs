@@ -1,4 +1,6 @@
+mod flexcercises;
 mod math_ops;
+use flexcercises::minor::is_palindrome;
 use math_ops::quadratic::{
     find_roots, is_perfect_square, EquationRoots::ComplexRoot, EquationRoots::NormalRoot,
 };
@@ -24,4 +26,10 @@ fn main() {
             );
         }
     }
+
+    let test_string1 = "abcdefghijihgfedcba";
+    let test_string2= "abcdefghijihgfedsba";
+
+    println!("Is {} a palindrome?: {}", test_string1, is_palindrome(test_string1));
+    println!("Is {} a palindrome?: {}", test_string2, is_palindrome(test_string2));
 }
