@@ -11,7 +11,7 @@ pub fn is_palindrome(phrase: &str) -> bool {
         cleaned_phrase.push(ch);
     }
     let mut reverse_idx = cleaned_phrase.len() - 1;
-    for idx in 0..cleaned_phrase.len() {
+    for idx in 0..(cleaned_phrase.len()-1) {
         if cleaned_phrase[idx] != cleaned_phrase[reverse_idx] {
             return false;
         }
